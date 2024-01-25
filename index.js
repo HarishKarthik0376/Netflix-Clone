@@ -1,3 +1,4 @@
+//box1
 document.getElementById("continueactualbox").addEventListener("mouseover",function()
 {
     document.getElementById("rightarrow").style.display = "block";
@@ -14,6 +15,7 @@ document.getElementById("continueactualbox").addEventListener("mouseleave",funct
     document.getElementById("rightarrow").style.display = "none";
     document.getElementById("leftarrow").style.display = "none";
 });
+//box2
 document.getElementById("continueactualbox1").addEventListener("mouseover",function()
 {
     document.getElementById("rightarrow1").style.display = "block";
@@ -30,6 +32,24 @@ document.getElementById("continueactualbox1").addEventListener("mouseleave",func
     document.getElementById("rightarrow1").style.display = "none";
     document.getElementById("leftarrow1").style.display = "none";
 });
+//box3
+document.getElementById("continueactualbox3").addEventListener("mouseover",function()
+{
+    document.getElementById("rightarrow2").style.display = "block";
+    document.getElementById("leftarrow2").style.display = "block";
+    document.getElementById("rightarrow2").addEventListener("click",function(){
+        Scroll(document.getElementById("continueactualbox3"),'right',25,100,20);
+    })
+    document.getElementById("leftarrow2").addEventListener("click",function(){
+        Scroll(document.getElementById("continueactualbox3"),'left',25,100,20);
+    })
+});
+document.getElementById("continueactualbox3").addEventListener("mouseleave",function()
+{
+    document.getElementById("rightarrow2").style.display = "none";
+    document.getElementById("leftarrow2").style.display = "none";
+});
+//function
 function Scroll(element,direction,speed,distance,step){
     scrollAmount = 0;
     var slideTimer = setInterval(function(){
@@ -44,6 +64,7 @@ function Scroll(element,direction,speed,distance,step){
         }
     }, speed);
 }
+//otherjavacode
 window.addEventListener("scroll",function(){
     if(this.scrollY==0)
     {   this.document.getElementById("navbar").style.transition = "450ms"
