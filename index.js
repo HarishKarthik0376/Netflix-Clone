@@ -58,7 +58,7 @@ window.addEventListener("scroll",function(){
 })
 document.getElementById("imagehero").addEventListener("ended",e=>{
     document.getElementById("imagehero").setAttribute("src","");
-    document.getElementById("imagehero").setAttribute("poster","/Resources/newnew.jpg");
+    document.getElementById("imagehero").setAttribute("poster","Resources/newnew.jpg");
     document.getElementById("audiooff").style.display = "none";
     document.getElementById("audioon").style.display = "none";
 })
